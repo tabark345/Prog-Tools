@@ -16,6 +16,7 @@ import MarkdownToHtml from "./components/tools/MarkdownToHtml";
 import PasswordGenerator from "./components/tools/PasswordGenerator";
 import RegexTester from "./components/tools/RegexTester";
 import TextTransformer from "./components/tools/TextTransformer";
+import LanguageFixer from "./components/tools/LanguageFixer";
 
 const App = () => {
   const [activeTool, setActiveTool] = useState("readme");
@@ -41,6 +42,7 @@ const App = () => {
     { id: "password", name: "منشئ كلمات مرور", icon: "🔒" },
     { id: "regex", name: "مختبر Regex", icon: "🧬" },
     { id: "texttransform", name: "🔁 محول النصوص", icon: "🔁" },
+    { id: "languagefixer", name: "🔁 محول لوحة المفاتيح", icon: "🔁" },
   ];
 
   const renderTool = () => {
@@ -73,6 +75,8 @@ const App = () => {
         return <RegexTester />;
       case "texttransform":
         return <TextTransformer />;
+      case "languagefixer":
+        return <LanguageFixer />;
       default:
         return <ReadmeGenerator />;
     }
@@ -125,6 +129,9 @@ const App = () => {
                       onClick={() => {
                         setActiveTool(tool.id);
                         setShowSidebar(false);
+                        setTimeout(() => {
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }, 100);
                       }}
                       className={`w-full text-right flex items-center justify-start p-3 rounded-lg transition-all ${
                         activeTool === tool.id
