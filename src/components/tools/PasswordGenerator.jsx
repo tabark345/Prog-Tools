@@ -16,7 +16,7 @@ const PasswordGenerator = () => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-6">
+    <div className="bg-form-white dark:bg-form-dark rounded-xl shadow-lg p-6">
       <h2 className="text-2xl font-bold mb-4">🔐 منشئ كلمات مرور</h2>
       <label className="block mb-2">الطول: {length} حرف</label>
       <input

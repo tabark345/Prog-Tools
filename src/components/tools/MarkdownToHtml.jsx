@@ -11,13 +11,13 @@ const MarkdownToHtml = () => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-6">
+    <div className="bg-form-white dark:bg-form-dark rounded-xl shadow-lg p-6">
       <h2 className="text-2xl font-bold mb-4">📝 تحويل Markdown إلى HTML</h2>
       <textarea
         rows={8}
         value={markdown}
         onChange={(e) => setMarkdown(e.target.value)}
-        className="w-full p-3 border rounded-lg font-mono text-sm"
+        className="w-full p-3 border rounded-lg font-mono text-sm text-text-light dark:text-text-dark bg-form-light dark:bg-form-dark"
         placeholder="أدخل كود Markdown هنا..."
       />
       <button

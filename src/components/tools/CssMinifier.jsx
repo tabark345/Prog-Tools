@@ -17,7 +17,7 @@ const CssMinifier = () => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-6">
+    <div className="bg-form-white dark:bg-form-dark rounded-xl shadow-lg p-6">
       <h2 className="text-2xl font-bold mb-4">🎯 ضاغط CSS</h2>
       <textarea
         rows={10}

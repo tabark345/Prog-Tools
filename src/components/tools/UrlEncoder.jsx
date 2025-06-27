@@ -10,7 +10,7 @@ const UrlEncoder = () => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-6">
+    <div className="bg-form-white dark:bg-form-dark  rounded-xl shadow-lg p-6">
       <h2 className="text-2xl font-bold mb-4">🔗 مشفر URL</h2>
       <textarea
         rows={5}

@@ -1,8 +1,6 @@
-// src/components/tools/LanguageFixer.jsx
 import React, { useState } from "react";
 
 const enToAr = {
-  // أحرف
   q: "ض",
   w: "ص",
   e: "ث",
@@ -101,51 +99,51 @@ const LanguageFixer = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg">
-      <h2 className="text-2xl font-bold mb-4 text-indigo-700 dark:text-indigo-300">
+    <div className="bg-form-light dark:bg-form-dark p-6 rounded-xl shadow-lg transition-colors duration-300">
+      <h2 className="text-2xl font-bold mb-4 text-text-light dark:text-text-dark">
         🌐 أداة تصحيح خطأ اللغة
       </h2>
 
       <textarea
         rows="4"
-        className="w-full p-3 rounded-lg border dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-100"
+        className="w-full p-3 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-slate-800 text-text-light dark:text-text-dark"
         placeholder="الصق أو اكتب نصًا بلغتك الخاطئة"
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
 
       <div className="flex items-center justify-between mt-4">
-        <label className="text-sm dark:text-gray-300">
+        <label className="text-sm text-text-light dark:text-text-dark flex items-center">
           <input
             type="checkbox"
             checked={toArabic}
             onChange={() => setToArabic(!toArabic)}
-            className="mr-2"
+            className="mr-2 accent-primary-light dark:accent-primary-dark"
           />
           التحويل إلى العربية
         </label>
 
         <button
           onClick={handleConvert}
-          className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg"
+          className="bg-primary-light dark:bg-primary-dark text-white px-4 py-2 rounded-lg hover:opacity-90 transition"
         >
           تحويل النص
         </button>
       </div>
 
       {output && (
-        <div className="mt-4 p-3 bg-gray-100 dark:bg-gray-800 rounded-lg border dark:border-gray-600 relative">
-          <p className="text-sm text-gray-700 dark:text-gray-200 font-semibold">
+        <div className="mt-4 p-3 bg-white dark:bg-slate-800 rounded-lg border border-border-light dark:border-border-dark relative">
+          <p className="text-sm font-semibold text-text-light dark:text-text-dark">
             🔄 النص بعد التحويل:
           </p>
-          <p className="mt-2 text-gray-900 dark:text-white break-words whitespace-pre-wrap">
+          <p className="mt-2 text-text-light dark:text-white break-words whitespace-pre-wrap">
             {output}
           </p>
 
-          <div className="flex justify-end mt-2">
+          <div className="flex justify-end mt-3">
             <button
               onClick={handleCopy}
-              className="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-sm"
+              className="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 rounded text-sm"
             >
               {copied ? "✅ تم النسخ" : "📋 نسخ النص"}
             </button>

@@ -1,5 +1,13 @@
-@import "tailwindcss";
-@layer theme, base, components, utilities;
-@import "tailwindcss/theme.css" layer(theme);
-@import "tailwindcss/preflight.css" layer(base);
-@import "tailwindcss/utilities.css" layer(utilities);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ✅ مخصص للوضع الفاتح */
+.bg-gradient-main-light {
+  @apply bg-gradient-to-br from-gradientStart-light to-gradientEnd-light;
+}
+
+/* ✅ مخصص للوضع الداكن */
+.bg-gradient-main-dark {
+  @apply bg-gradient-to-br from-gradientStart-dark to-gradientEnd-dark;
+}
